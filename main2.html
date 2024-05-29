@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,92 +10,86 @@
             font-family: Arial, sans-serif;
             margin: 40px;
         }
+
         .kop-surat {
             text-align: center;
         }
-        .kop-surat h1 {
-            margin: 0;
-        }
-        .kop-surat p {
-            margin: 5px 0;
-        }
+
         .garis-hitam {
             border-top: 3px solid black;
             margin: 20px 0;
         }
+
         .content {
             text-align: left;
+            margin: 0 auto;
+            max-width: 800px;
         }
-        .content #periode {
-            text-align: right;
-        }
+
         .content h2 {
             text-align: center;
             text-decoration: underline;
         }
-        .rincian-gaji {
-            margin: 20px 0;
-        }
-        .rincian-gaji p {
-            margin: 5px 0;
-        }
+
         .footer {
-            margin-top: 50px;
             display: flex;
             justify-content: space-between;
+            align-items: center;
+            /* tambahkan ini */
+            margin-top: 50px;
         }
-        .footer div {
+
+        .footer .left,
+        .footer .right {
             width: 45%;
         }
-        .footer .left {
-            text-align: left;
-        }
-        .footer .right {
-            text-align: right;
-        }
+
         .signature-space {
             margin-top: 60px;
         }
-        
+
+        .footer .left,
+        .footer .right {
+            text-align: center;
+
+        }
     </style>
 </head>
+
 <body>
     <div class="kop-surat">
         <h1>ini judul</h1>
-        <h2>
-                 ini sub judul
-        </h2>
-        <p></p>
+        <h2>ini sub judul</h2>
     </div>
     <div class="garis-hitam"></div>
     <div class="content">
         <h2>SLIP GAJI KARYAWAN</h2>
-        <p id="periode">Periode Bulan</p>
-        <br>
+        <p style="text-align:right;">Periode Bulan</p>
         <p><b>Nama</b></p>
         <p><b>Jabatan</b></p>
-        <br>
         <div class="rincian-gaji">
             <b>Rincian Gaji</b>
             <p>Gaji Pokok</p>
             <p>Jumlah Kehadiran</p>
             <p>_________+</p>
         </div>
-        <br>
         <p><b>Total Salary</b></p>
-    </div>
-    <div class="footer">
-        <div class="left">
-            <p>Mengetahui</p>
-            <p>Manager Area</p>
-            <div class="signature-space"></div>
-            <p>Nama</p>
+        <div>
+            <p>mengetahui</p>
         </div>
-        <div class="right">
-            <p>Penerima Gaji</p>
-            <div class="signature-space"></div>
-            <p>Nama</p>
+        <div class="footer">
+            <div class="left">
+                <p>Manager Area</p>
+                <div class="signature-space"></div>
+                <p>Nama</p>
+            </div>
+            <div class="right">
+                <p>Penerima Gaji</p>
+                <div class="signature-space"></div>
+                <p>Nama</p>
+            </div>
         </div>
     </div>
 </body>
+
 </html>
