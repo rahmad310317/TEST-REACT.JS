@@ -23,7 +23,7 @@ const FormRegister = () => {
             type="password" 
             placeholder="******" 
             name="password"/>
-          <Button>Register</Button>   
+          <Button className="w-full" color="blue-600">Register</Button>   
         </form>
     )
 }

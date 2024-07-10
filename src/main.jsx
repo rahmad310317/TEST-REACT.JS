@@ -4,6 +4,8 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import LoginPage from "./pages/login"
 import RegisterPage from "./pages/register"
+import CardProduct from './pages/product'
+import NotFoundPage from './pages/404'
 
 
 const router = createBrowserRouter([
@@ -15,6 +17,14 @@ const router = createBrowserRouter([
     path:"/register",
     element: <RegisterPage />
   },
+  {
+    path: "/",
+    element: <CardProduct />  // Redirect to 404 page if route doesn't match any of the defined paths. This can be replaced with a custom 404 page.
+  },
+  {
+    path:"/dashboard",
+    element: <NotFoundPage />
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
