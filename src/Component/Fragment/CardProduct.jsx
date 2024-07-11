@@ -4,47 +4,47 @@ import Button from "../Element/Button";
 const CardProduct = (props) => {
     const {children} = props;
     return (
-        <div className="w-full max-w-sm bg-slate-300 border border-gray-200 rounded-lg shadow-md">
+        <div className="w-full max-w-sm bg-slate-300 border border-gray-200 rounded-lg shadow-md mx-2 flex flex-col justify-between">
             {children}
         </div>
 
     );
 };
 
-const Header = () => {
+const Header = (props) => {
+    const {image} = props;
     return (
         <Link>
             <img
-                src="/images/images-1.jpg"
+                src={image}
                 alt="sepatu"
-                className="p-8 rounded-t-lg"
+                className="p-8 rounded-lg"
             />
         </Link>
     );
 }
 
-const Body = () => {
+const Body = (props) => {
+    const {title, children} = props;
     return (
-        <div className="ml-2 px-5 pb-8 mb-2">
+        <div className="ml-2 px-5 pb-8 mb-2 h-full">
             <a href="">
                 <h2 className="mb-1 text-xl font-semibold tracking-tight text-white">
-                    Sepatu Yuk
+                    {title}
                 </h2>
                 <p className="text-sm ">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga
-                    modi voluptas laborum reprehenderit. Repellendus at iusto eligendi
-                    officiis minima magni qui in, molestias voluptates! Deserunt quia
-                    recusandae debitis veniam eum.
+                    {children}
                 </p>
             </a>
         </div>
     );
 }
 
-const Footer = () => {
+const Footer = (props) => {
+    const {title} = props;
     return (
         <div className="flex items-center justify-between p-3 ml-2">
-            <span className="text-xl font bold text-white">Rp. 1.000.000</span>
+            <span className="text-xl font bold text-white">{title}</span>
             <Button classname="blue-600">Add To Cart</Button>
         </div>
     );

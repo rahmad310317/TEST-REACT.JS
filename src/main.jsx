@@ -18,7 +18,7 @@ const router = createBrowserRouter([
     element: <RegisterPage />
   },
   {
-    path: "/",
+    path: "/products",
     element: <CardProduct />  // Redirect to 404 page if route doesn't match any of the defined paths. This can be replaced with a custom 404 page.
   },
   {
